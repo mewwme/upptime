@@ -13,6 +13,8 @@ sites:
     url: http://168.119.88.145:3004
   - name: Mewwme's [2]
     url: http://168.119.88.145:3009
+  - name: Mewwme's [3]
+    url: http://168.119.88.145:3011
 
 status-website:
   # Add your custom domain name, or remove the `cname` line if you don't have a domain
