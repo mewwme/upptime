@@ -5,6 +5,8 @@ repo: upptime # The name of this repository
 sites:
   - name: Mewwme Website
     url: https://meww.me
+  - name: Mewwme Docs
+    url: https://docs.meww.me
   - name: Mewwme's
     url: http://34.142.204.199:65535
   - name: Mewwme's [1]
