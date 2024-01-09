@@ -88,5 +88,23 @@
     "timeMonth": 252,
     "timeYear": 252,
     "dailyMinutesDown": {}
+  },
+  {
+    "name": "Mewwme's [3]",
+    "url": "http://168.119.88.145:3011",
+    "icon": "https://icons.duckduckgo.com/ip3/168.119.88.145.ico",
+    "slug": "mewwme-s-3",
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 195,
+    "timeDay": 195,
+    "timeWeek": 195,
+    "timeMonth": 195,
+    "timeYear": 195,
+    "dailyMinutesDown": {}
   }
 ]
