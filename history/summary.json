@@ -18,6 +18,24 @@
     "dailyMinutesDown": {}
   },
   {
+    "name": "Mewwme Docs",
+    "url": "https://docs.meww.me",
+    "icon": "https://icons.duckduckgo.com/ip3/docs.meww.me.ico",
+    "slug": "mewwme-docs",
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 251,
+    "timeDay": 251,
+    "timeWeek": 251,
+    "timeMonth": 251,
+    "timeYear": 251,
+    "dailyMinutesDown": {}
+  },
+  {
     "name": "Mewwme's",
     "url": "http://34.142.204.199:65535",
     "icon": "https://icons.duckduckgo.com/ip3/34.142.204.199.ico",
@@ -37,7 +55,7 @@
   },
   {
     "name": "Mewwme's [1]",
-    "url": "http://168.119.88.145:3004/",
+    "url": "http://168.119.88.145:3004",
     "icon": "https://icons.duckduckgo.com/ip3/168.119.88.145.ico",
     "slug": "mewwme-s-1",
     "status": "up",
@@ -55,7 +73,7 @@
   },
   {
     "name": "Mewwme's [2]",
-    "url": "http://168.119.88.145:3009/",
+    "url": "http://168.119.88.145:3009",
     "icon": "https://icons.duckduckgo.com/ip3/168.119.88.145.ico",
     "slug": "mewwme-s-2",
     "status": "up",
