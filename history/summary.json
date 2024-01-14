@@ -40,19 +40,19 @@
     "url": "http://34.142.204.199:65535",
     "icon": "https://icons.duckduckgo.com/ip3/34.142.204.199.ico",
     "slug": "mewwme-s",
-    "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "99.99%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 360,
-    "timeDay": 342,
-    "timeWeek": 360,
-    "timeMonth": 360,
-    "timeYear": 360,
+    "status": "up",
+    "uptime": "96.12%",
+    "uptimeDay": "78.50%",
+    "uptimeWeek": "96.12%",
+    "uptimeMonth": "96.12%",
+    "uptimeYear": "96.12%",
+    "time": 368,
+    "timeDay": 380,
+    "timeWeek": 368,
+    "timeMonth": 368,
+    "timeYear": 368,
     "dailyMinutesDown": {
-      "2024-01-14": 0
+      "2024-01-14": 310
     }
   },
   {
