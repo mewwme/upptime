@@ -1,7 +1,7 @@
 url: http://34.142.204.199:65535
-status: down
-code: 0
-responseTime: 0
-lastUpdated: 2024-01-14T14:40:41.185Z
+status: up
+code: 200
+responseTime: 417
+lastUpdated: 2024-01-14T19:50:18.063Z
 startTime: 2024-01-09T07:00:20.440Z
 generator: Upptime <https://github.com/upptime/upptime>
