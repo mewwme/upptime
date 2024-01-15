@@ -8,7 +8,7 @@ sites:
   - name: Mewwme Docs
     url: https://docs.meww.me
   - name: Mewwme's
-    url: http://34.142.204.199:65535
+    url: http://168.119.88.145:21930
   - name: Mewwme's [1]
     url: http://168.119.88.145:3004
   - name: Mewwme's [2]
