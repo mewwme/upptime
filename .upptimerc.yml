@@ -8,13 +8,7 @@ sites:
   - name: Mewwme Docs
     url: https://docs.meww.me
   - name: Mewwme's
-    url: http://panel.meww.me:3000
-  - name: Mewwme's [1]
-    url: http://borneo.alfari.id:39008
-  - name: Mewwme's [2]
-    url: http://panel.meww.me:3004
-  - name: Mewwme's [3]
-    url: http://panel.meww.me:3005
+    url: http://45.137.70.68:8016
 
 status-website:
   # Add your custom domain name, or remove the `cname` line if you don't have a domain
