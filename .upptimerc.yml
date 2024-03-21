@@ -7,8 +7,8 @@ sites:
     url: https://meww.me
   - name: Mewwme Docs
     url: https://docs.meww.me
-  - name: Mewwme's
-    url: http://45.137.70.68:8016
+  - name: Mewwme Dashboard
+    url: https://api.meww.me
 
 status-website:
   # Add your custom domain name, or remove the `cname` line if you don't have a domain
