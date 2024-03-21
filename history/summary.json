@@ -40,19 +40,19 @@
     "url": "http://45.137.70.68:8016",
     "icon": "https://icons.duckduckgo.com/ip3/45.137.70.68.ico",
     "slug": "webserver",
-    "status": "down",
-    "uptime": "99.72%",
-    "uptimeDay": "99.72%",
-    "uptimeWeek": "99.72%",
-    "uptimeMonth": "99.72%",
-    "uptimeYear": "99.72%",
-    "time": 215,
-    "timeDay": 215,
-    "timeWeek": 215,
-    "timeMonth": 215,
-    "timeYear": 215,
+    "status": "up",
+    "uptime": "61.22%",
+    "uptimeDay": "61.22%",
+    "uptimeWeek": "61.22%",
+    "uptimeMonth": "61.22%",
+    "uptimeYear": "61.22%",
+    "time": 282,
+    "timeDay": 282,
+    "timeWeek": 282,
+    "timeMonth": 282,
+    "timeYear": 282,
     "dailyMinutesDown": {
-      "2024-03-21": 0
+      "2024-03-21": 15
     }
   }
 ]
