@@ -4,11 +4,11 @@ repo: upptime # The name of this repository
 
 sites:
   - name: Website
-    url: https://mewwme.vercel.app/
+    url: https://meww.me/
   - name: Docs
-    url: https://docs-mewwme.vercel.app/
-  - name: Webserver
-    url: http://45.137.70.68:8016
+    url: https://docs.meww.me/
+  - name: WebServer
+    url: https://ws.meww.me/
 
 status-website:
   # Add your custom domain name, or remove the `cname` line if you don't have a domain
