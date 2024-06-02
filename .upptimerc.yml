@@ -4,9 +4,9 @@ repo: upptime # The name of this repository
 
 sites:
   - name: Website
-    url: https://meww.me/
+    url: https://meww.me
   - name: Docs
-    url: https://docs.meww.me/
+    url: https://docs.meww.me
   - name: WebServer
     url: https://ws.meww.me/
 
