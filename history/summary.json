@@ -10,13 +10,13 @@
     "uptimeWeek": "0.00%",
     "uptimeMonth": "0.00%",
     "uptimeYear": "0.00%",
-    "time": 151,
-    "timeDay": 137,
-    "timeWeek": 123,
-    "timeMonth": 145,
-    "timeYear": 151,
+    "time": 149,
+    "timeDay": 126,
+    "timeWeek": 124,
+    "timeMonth": 142,
+    "timeYear": 149,
     "dailyMinutesDown": {
-      "2024-06-02": 354
+      "2024-06-02": 387
     }
   },
   {
@@ -30,13 +30,13 @@
     "uptimeWeek": "0.00%",
     "uptimeMonth": "0.00%",
     "uptimeYear": "0.00%",
-    "time": 165,
-    "timeDay": 147,
+    "time": 164,
+    "timeDay": 153,
     "timeWeek": 93,
-    "timeMonth": 237,
-    "timeYear": 165,
+    "timeMonth": 235,
+    "timeYear": 164,
     "dailyMinutesDown": {
-      "2024-06-02": 354
+      "2024-06-02": 387
     }
   },
   {
@@ -44,17 +44,17 @@
     "url": "https://ws.meww.me/",
     "icon": "https://icons.duckduckgo.com/ip3/ws.meww.me.ico",
     "slug": "web-server",
-    "status": "up",
-    "uptime": "67.85%",
-    "uptimeDay": "67.85%",
-    "uptimeWeek": "67.85%",
-    "uptimeMonth": "67.85%",
-    "uptimeYear": "67.85%",
-    "time": 248,
-    "timeDay": 248,
-    "timeWeek": 248,
-    "timeMonth": 248,
-    "timeYear": 248,
+    "status": "down",
+    "uptime": "71.51%",
+    "uptimeDay": "71.51%",
+    "uptimeWeek": "71.51%",
+    "uptimeMonth": "71.51%",
+    "uptimeYear": "71.51%",
+    "time": 225,
+    "timeDay": 225,
+    "timeWeek": 225,
+    "timeMonth": 225,
+    "timeYear": 225,
     "dailyMinutesDown": {
       "2024-06-02": 82
     }
