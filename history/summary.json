@@ -16,7 +16,7 @@
     "timeMonth": 145,
     "timeYear": 151,
     "dailyMinutesDown": {
-      "2024-06-02": 284
+      "2024-06-02": 354
     }
   },
   {
@@ -36,7 +36,7 @@
     "timeMonth": 237,
     "timeYear": 165,
     "dailyMinutesDown": {
-      "2024-06-02": 284
+      "2024-06-02": 354
     }
   },
   {
@@ -44,19 +44,19 @@
     "url": "https://ws.meww.me/",
     "icon": "https://icons.duckduckgo.com/ip3/ws.meww.me.ico",
     "slug": "web-server",
-    "status": "down",
-    "uptime": "93.55%",
-    "uptimeDay": "93.55%",
-    "uptimeWeek": "93.55%",
-    "uptimeMonth": "93.55%",
-    "uptimeYear": "93.55%",
-    "time": 247,
-    "timeDay": 247,
-    "timeWeek": 247,
-    "timeMonth": 247,
-    "timeYear": 247,
+    "status": "up",
+    "uptime": "67.85%",
+    "uptimeDay": "67.85%",
+    "uptimeWeek": "67.85%",
+    "uptimeMonth": "67.85%",
+    "uptimeYear": "67.85%",
+    "time": 248,
+    "timeDay": 248,
+    "timeWeek": 248,
+    "timeMonth": 248,
+    "timeYear": 248,
     "dailyMinutesDown": {
-      "2024-06-02": 12
+      "2024-06-02": 82
     }
   }
 ]
