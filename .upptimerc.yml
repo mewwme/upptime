@@ -4,9 +4,9 @@ repo: upptime # The name of this repository
 
 sites:
   - name: Website
-    url: https://meww.me
+    url: https://meww.me/
   - name: Docs
-    url: https://docs.meww.me
+    url: https://docs.meww.me/
   - name: WebServer
     url: https://ws.meww.me/
 
@@ -22,7 +22,7 @@ status-website:
   introMessage: See which of my websites are up, which are down, and which are broken here!
   navbar:
     - title: Invite bot
-      href: https://is-a.fun/mybot
+      href: https://meww.me/invite
     - title: Official Website
       href: https://meww.me
     - title: Server Support
