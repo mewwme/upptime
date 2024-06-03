@@ -41,7 +41,7 @@ jobs:
           color=15105570 # Orange
         elif [[ "$status" == *"Outage detected"* ]]; then
           uptime_status="Outage detected"
-          color=15158332 # Red
+          color=15158322 # Red
         fi
 
         echo "::set-output name=status_text::$uptime_status"
