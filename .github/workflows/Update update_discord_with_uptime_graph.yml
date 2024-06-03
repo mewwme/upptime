@@ -1,0 +1,100 @@
+name: Update Discord with Uptime Graph
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '*/1 * * * *'
+
+jobs:
+  send_discord_message:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: sudo apt-get install -y jq
+
+    - name: Fetch README content
+      id: fetch_readme
+      run: |
+        readme_content=$(cat README.md)
+        echo "::set-output name=content::$readme_content"
+
+    - name: Extract uptime status and graph
+      id: extract_info
+      run: |
+        content="${{ steps.fetch_readme.outputs.content }}"
+        status=$(echo "$content" | grep -oP '(?<=<!--live status--> ).*')
+        graph_url=$(echo "$content" | grep -oP '(?<=!\[Uptime Graph\]\().*(?=\))')
+        uptime_status="Status unknown"
+        color=15158332
+
+        if [[ "$status" == *"All systems operational"* ]]; then
+          uptime_status="All systems operational"
+          color=3066993 # Green
+        elif [[ "$status" == *"Partial Outage"* ]]; then
+          uptime_status="Partial Outage"
+          color=15105570 # Orange
+        elif [[ "$status" == *"Outage detected"* ]]; then
+          uptime_status="Outage detected"
+          color=15158332 # Red
+        fi
+
+        echo "::set-output name=status_text::$uptime_status"
+        echo "::set-output name=graph_url::$graph_url"
+        echo "::set-output name=color::$color"
+
+    - name: Print extracted information for debugging
+      run: |
+        echo "Uptime status: ${{ steps.extract_info.outputs.status_text }}"
+        echo "Uptime graph URL: ${{ steps.extract_info.outputs.graph_url }}"
+        echo "Embed color: ${{ steps.extract_info.outputs.color }}"
+
+    - name: Send site content and graph to Discord
+      env:
+        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+      run: |
+        color="${{ steps.extract_info.outputs.color }}"
+        status_text="${{ steps.extract_info.outputs.status_text }}"
+        graph_url="${{ steps.extract_info.outputs.graph_url }}"
+        echo "Sending status and graph to Discord"
+        curl -H "Content-Type: application/json" \
+             -d "{
+                   \"embeds\": [
+                     {
+                       \"title\": \"Miko Radio Uptime Status Update\",
+                       \"description\": \"Here is the latest status update for Miko Radio.\",
+                       \"color\": $color,
+                       \"fields\": [
+                         {
+                           \"name\": \"Website\",
+                           \"value\": \"[Miko Radio](https://mikoradio.com)\",
+                           \"inline\": true
+                         },
+                         {
+                           \"name\": \"Status Page\",
+                           \"value\": \"[Miko Radio Status](https://status.mikoradio.com)\",
+                           \"inline\": true
+                         },
+                         {
+                           \"name\": \"Summary\",
+                           \"value\": \"$status_text\",
+                           \"inline\": false
+                         }
+                       ],
+                       \"image\": {
+                         \"url\": \"$graph_url\"
+                       }
+                     }
+                   ]
+                 }" \
+             $DISCORD_WEBHOOK_URL
+
+
+
+
+
