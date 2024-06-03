@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Website",
+    "url": "https://meww.me/",
+    "icon": "https://icons.duckduckgo.com/ip3/meww.me.ico",
+    "slug": "website",
+    "status": "down",
+    "uptime": "0.00%",
+    "uptimeDay": "0.00%",
+    "uptimeWeek": "0.00%",
+    "uptimeMonth": "0.00%",
+    "uptimeYear": "0.00%",
+    "time": 149,
+    "timeDay": 126,
+    "timeWeek": 124,
+    "timeMonth": 142,
+    "timeYear": 149,
+    "dailyMinutesDown": {
+      "2024-06-02": 399
+    }
+  },
+  {
+    "name": "Docs",
+    "url": "https://docs.meww.me/",
+    "icon": "https://icons.duckduckgo.com/ip3/docs.meww.me.ico",
+    "slug": "docs",
+    "status": "down",
+    "uptime": "0.00%",
+    "uptimeDay": "0.00%",
+    "uptimeWeek": "0.00%",
+    "uptimeMonth": "0.00%",
+    "uptimeYear": "0.00%",
+    "time": 164,
+    "timeDay": 153,
+    "timeWeek": 93,
+    "timeMonth": 235,
+    "timeYear": 164,
+    "dailyMinutesDown": {
+      "2024-06-02": 399
+    }
+  },
+  {
+    "name": "WebServer",
+    "url": "https://ws.meww.me/",
+    "icon": "https://icons.duckduckgo.com/ip3/ws.meww.me.ico",
+    "slug": "web-server",
+    "status": "up",
+    "uptime": "68.55%",
+    "uptimeDay": "68.55%",
+    "uptimeWeek": "68.55%",
+    "uptimeMonth": "68.55%",
+    "uptimeYear": "68.55%",
+    "time": 219,
+    "timeDay": 219,
+    "timeWeek": 219,
+    "timeMonth": 219,
+    "timeYear": 219,
+    "dailyMinutesDown": {
+      "2024-06-02": 95
+    }
+  }
+]
