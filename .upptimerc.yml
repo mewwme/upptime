@@ -3,19 +3,19 @@ owner: mewwme # Your GitHub organization or username, where this repository live
 repo: upptime # The name of this repository
 
 sites:
-  - name: WebServer
-    url: https://ws.meww.me/
+  - name: Webserver
+    url: https://ws.meww.me
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
+  # Add your custom domains names, or remove the `cname` line if you don't have a domain
   # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  # cname: status.meww.me
-  baseUrl: /upptime
+  # cname: miko-radio.github.io
+  # baseUrl: /uptime-monitor
   logoUrl: https://avatars.githubusercontent.com/u/151395981?s=200&v=4
-  name: Mewwme Uptime
+  name: Mewwme
   theme: night
-  introTitle: "The Discord music bot that's 100% free with no payment or votes required to access all its amazing functionalities."
-  introMessage: See which of my websites are up, which are down, and which are broken here!
+  introTitle: "Miko Radio Resources. Powered by github actions."
+  introMessage: Miko Radio Resources, which are down, and which are broken here!
   navbar:
     - title: Invite bot
       href: https://meww.me/invite
