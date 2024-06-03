@@ -1,11 +1,11 @@
-name: Update Discord with Uptime Graph
+name: Update Discord with Uptime Status
 
 on:
   push:
     branches:
       - main
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/30 * * * *'
 
 jobs:
   send_discord_message:
@@ -15,53 +15,43 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Install dependencies
-      run: sudo apt-get install -y jq
-
     - name: Fetch README content
       id: fetch_readme
       run: |
-        readme_content=$(cat README.md)
+        readme_content=$(head -n 1 README.md)  # Read the first line
         echo "::set-output name=content::$readme_content"
-
-    - name: Extract uptime status and graph
-      id: extract_info
+    
+    - name: Determine status color
+      id: determine_status
       run: |
-        content="${{ steps.fetch_readme.outputs.content }}"
-        status=$(echo "$content" | grep -oP '(?<=<!--live status--> ).*')
-        graph_url=$(echo "$content" | grep -oP '(?<=!\[Uptime Graph\]\().*(?=\))')
-        uptime_status="Status unknown"
-        color=15158332
-
-        if [[ "$status" == *"All systems operational"* ]]; then
-          uptime_status="All systems operational"
-          color=3066993 # Green
-        elif [[ "$status" == *"Partial Outage"* ]]; then
-          uptime_status="Partial Outage"
-          color=15105570 # Orange
-        elif [[ "$status" == *"Outage detected"* ]]; then
-          uptime_status="Outage detected"
-          color=15158332 # Red
+        status="online"
+        color=5814783  # Green by default
+        if grep -q "offline" README.md; then
+          status="offline"
+          color=16711680  # Red
+        elif grep -q "partial" README.md; then
+          status="partial"
+          color=16753920  # Orange
         fi
-
-        echo "::set-output name=status_text::$uptime_status"
-        echo "::set-output name=graph_url::$graph_url"
+        echo "::set-output name=status::$status"
         echo "::set-output name=color::$color"
 
-    - name: Print extracted information for debugging
+    - name: Print fetched content for debugging
       run: |
-        echo "Uptime status: ${{ steps.extract_info.outputs.status_text }}"
-        echo "Uptime graph URL: ${{ steps.extract_info.outputs.graph_url }}"
-        echo "Embed color: ${{ steps.extract_info.outputs.color }}"
+        echo "Fetched README content: ${{ steps.fetch_readme.outputs.content }}"
+        echo "Status: ${{ steps.determine_status.outputs.status }}"
+        echo "Color: ${{ steps.determine_status.outputs.color }}"
 
-    - name: Send site content and graph to Discord
+    - name: Send status to Discord
       env:
         DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
       run: |
-        color="${{ steps.extract_info.outputs.color }}"
-        status_text="${{ steps.extract_info.outputs.status_text }}"
-        graph_url="${{ steps.extract_info.outputs.graph_url }}"
-        echo "Sending status and graph to Discord"
+        content="${{ steps.fetch_readme.outputs.content }}"
+        status="${{ steps.determine_status.outputs.status }}"
+        color="${{ steps.determine_status.outputs.color }}"
+        # Properly escape the fetched content
+        escaped_content=$(echo "$content" | jq -Rsa .)
+        echo "Sending status to Discord"
         curl -H "Content-Type: application/json" \
              -d "{
                    \"embeds\": [
@@ -82,13 +72,10 @@ jobs:
                          },
                          {
                            \"name\": \"Summary\",
-                           \"value\": \"$status_text\",
+                           \"value\": $escaped_content,
                            \"inline\": false
                          }
-                       ],
-                       \"image\": {
-                         \"url\": \"$graph_url\"
-                       }
+                       ]
                      }
                    ]
                  }" \
@@ -98,8 +85,15 @@ jobs:
 
 
 
-   
 
+
+
+
+
+
+
+
+   
 
 
 
